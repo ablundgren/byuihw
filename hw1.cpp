@@ -2,29 +2,29 @@
 #include <string>
 using namespace std;
 
-string getProfName(string profName);
-string getName(string name);
+string getProfName();
+string getName();
 void display(string profName, string name);
 
 int main()
 {
-    string profName;
-    profName = getProfName(profName);
-    string name;
-    name = getName(name);
+    string profName = getProfName();
+    string name = getName();
     display(profName, name);
     return 0;
 }
 
-string getProfName(string profName)
+string getProfName()
 {
+    string profName;
     cout << "What is your professor's name? ";
     cin >> profName;
     return profName;
 }
 
-string getName(string name)
+string getName()
 {
+    string name;
     cout << "What is your first name? ";
     cin >> name;
     return name;
