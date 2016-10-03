@@ -1,36 +1,39 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-char getProfName(char profName);
-char getName(char name);
-void display(char profName, char name);
+string getProfName(string profName);
+string getName(string name);
+void display(string profName, string name);
 
 int main()
 {
-    char profName[50] = getProfName(profName);
-    char name[50] = getName(name);
+    string profName;
+    profName = getProfName(profName);
+    string name;
+    name = getName(name);
     display(profName, name);
     return 0;
 }
 
-char getProfName(char profName)
+string getProfName(string profName)
 {
     cout << "What is your professor's name? ";
     cin >> profName;
     return profName;
 }
 
-char getName(char name)
+string getName(string name)
 {
     cout << "What is your first name? ";
     cin >> name;
     return name;
 }
 
-void display(profName, name)
+void display(string profName, string name)
 {
    cout << name << ", you are taking Br. "
-          << profName << "'s class, \"CS124\". ";
+          << profName << "'s class, \"CS124\". "
           << endl;
    return;
 }
